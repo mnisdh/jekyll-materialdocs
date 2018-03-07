@@ -5,9 +5,10 @@ date:   2017-03-01 09:00:00 +0800
 categories: Java
 tags: Java File I/O
 ---
-### Input
+**File I/O**  
 
-```java
+Input :
+{% highlight java linenos %}
 public ArrayList<Memo> getList(){
 	list.clear();
 
@@ -39,12 +40,11 @@ public ArrayList<Memo> getList(){
 
 	return list;
 }
-```
+{% endhighlight %}
 
 
-### Output
-
-```java
+Output :
+{% highlight java linenos %}
 public void create(Memo memo){
 	int newCount = getCount() + 1;
 	memo.setNo(newCount);
@@ -88,4 +88,4 @@ public void create(Memo memo){
 		}
 	}
 }
-```
+{% endhighlight %}

@@ -3,11 +3,12 @@ layout: post
 title:  "Android Widget"
 date:   2017-03-01 09:00:00 +0800
 categories: Android
-tags: Android Widget
+tags: Android Widget Toggle Switch Checkbox Radiogroup Seekbar Spinner
 ---
-### Toggle button
+**기본 Widget 설명**  
 
-```java
+Toggle button :
+{% highlight java linenos %}
 toggleButton.setOnCheckedChangeListener(checkedChangeListener);
 
 CompoundButton.OnCheckedChangeListener checkedChangeListener = new CompoundButton.OnCheckedChangeListener() {
@@ -22,12 +23,11 @@ CompoundButton.OnCheckedChangeListener checkedChangeListener = new CompoundButto
 
     }
 };
-```
+{% endhighlight %}
 
 
-### Switch
-
-```java
+Switch :
+{% highlight java linenos %}
 switch1.setOnCheckedChangeListener(checkedChangeListener);
 
 CompoundButton.OnCheckedChangeListener checkedChangeListener = new CompoundButton.OnCheckedChangeListener() {
@@ -42,12 +42,11 @@ CompoundButton.OnCheckedChangeListener checkedChangeListener = new CompoundButto
 
     }
 };
-```
+{% endhighlight %}
 
 
-### Checkbox
-
-```java
+Checkbox :
+{% highlight java linenos %}
 chkCow.setOnCheckedChangeListener(checkBoxCheckedChangedListener);
 chkPig.setOnCheckedChangeListener(checkBoxCheckedChangedListener);
 chkDog.setOnCheckedChangeListener(checkBoxCheckedChangedListener);
@@ -73,12 +72,11 @@ CompoundButton.OnCheckedChangeListener checkBoxCheckedChangedListener = new Comp
 
     }
 };
-```
+{% endhighlight %}
 
 
-### Radiogroup
-
-```java
+Radiogroup :
+{% highlight java linenos %}
 radioGroup.setOnCheckedChangeListener(radioCheckedChangeListener);
 
 RadioGroup.OnCheckedChangeListener radioCheckedChangeListener = new RadioGroup.OnCheckedChangeListener() {
@@ -101,12 +99,11 @@ RadioGroup.OnCheckedChangeListener radioCheckedChangeListener = new RadioGroup.O
         }
     }
 }
-```
+{% endhighlight %}
 
 
-### Seekbar
-
-```java
+Seekbar :
+{% highlight java linenos %}
 seekBar.setOnSeekBarChangeListener(seekBarChangeListener);
 
 SeekBar.OnSeekBarChangeListener seekBarChangeListener = new SeekBar.OnSeekBarChangeListener() {
@@ -127,12 +124,11 @@ SeekBar.OnSeekBarChangeListener seekBarChangeListener = new SeekBar.OnSeekBarCha
 
     }
 };
-```
+{% endhighlight %}
 
 
-### Spinner
-
-```java
+Spinner :
+{% highlight java linenos %}
 package android.daehoshin.com.basicwidget;
 
 import android.os.Bundle;
@@ -191,4 +187,4 @@ public class SpinnerActivity extends AppCompatActivity {
 
     }
 }
-```
+{% endhighlight %}

@@ -5,9 +5,10 @@ date:   2017-03-01 09:00:00 +0800
 categories: Android
 tags: Android Listener
 ---
-### OnClickListener
+**Listener 사용**  
 
-```java
+OnClickListener :
+{% highlight java linenos %}
 package android.daehoshin.com.basiclayout;
 
 import android.content.Intent;
@@ -97,4 +98,4 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 }
-```
+{% endhighlight %}

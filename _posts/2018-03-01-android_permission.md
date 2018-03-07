@@ -5,9 +5,10 @@ date:   2017-03-01 09:00:00 +0800
 categories: Android
 tags: Android Permission
 ---
-### [모든 Permission 종류](https://developer.android.com/reference/android/Manifest.permission.html)
+**Permission**  
 - 안드로이드 기능을 사용시 권한을 획득하여야만 사용할 수 있다
 - 설치시만 체크하는 권한과 런타임시에도 체크해야하는 권한이 있있다
+- [모든 Permission 종류](https://developer.android.com/reference/android/Manifest.permission.html)
 
 ```
 ACCESS_FINE_LOCATION            위치정보 확인함
@@ -43,11 +44,10 @@ WRITE_SMS                      	SMS쓰기
 ```
 
 
-### 사용법
+**사용법**  
 
-#### androidmanifest.xml
-
-```java
+androidmanifest.xml :
+{% highlight xml linenos %}
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="android.daehoshin.com.permission">
@@ -77,12 +77,11 @@ WRITE_SMS                      	SMS쓰기
     </application>
 
 </manifest>
-```
+{% endhighlight %}
 
 
-#### BaseActivity
-
-```java
+BaseActivity :
+{% highlight java linenos %}
 package android.daehoshin.com.permission;
 
 import android.Manifest;
@@ -135,7 +134,5 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     abstract void init();
-
-
 }
-```
+{% endhighlight %}

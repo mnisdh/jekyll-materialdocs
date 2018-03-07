@@ -24,8 +24,8 @@
     <!-- Begin Jekyll SEO tag v2.3.0 -->
 <meta property="og:title" content="Java Math Random" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="숫자계산 1 ~ max까지 더하는 메소드" />
-<meta property="og:description" content="숫자계산 1 ~ max까지 더하는 메소드" />
+<meta name="description" content="숫자계산" />
+<meta property="og:description" content="숫자계산" />
 <link rel="canonical" href="http://localhost:4000/mnisdh/2017/03/01/java_math_random" />
 <meta property="og:url" content="http://localhost:4000/mnisdh/2017/03/01/java_math_random" />
 <meta property="og:site_name" content="mnisdh" />
@@ -33,7 +33,7 @@
 <meta property="article:published_time" content="2017-03-01T10:00:00+09:00" />
 <meta name="google-site-verification" content="UA-96359860-1" />
 <script type="application/ld+json">
-{"name":null,"description":"숫자계산 1 ~ max까지 더하는 메소드","author":null,"@type":"BlogPosting","url":"http://localhost:4000/mnisdh/2017/03/01/java_math_random","publisher":null,"image":null,"headline":"Java Math Random","dateModified":"2017-03-01T10:00:00+09:00","datePublished":"2017-03-01T10:00:00+09:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mnisdh/2017/03/01/java_math_random"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"숫자계산","author":null,"@type":"BlogPosting","url":"http://localhost:4000/mnisdh/2017/03/01/java_math_random","publisher":null,"image":null,"headline":"Java Math Random","dateModified":"2017-03-01T10:00:00+09:00","datePublished":"2017-03-01T10:00:00+09:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mnisdh/2017/03/01/java_math_random"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -116,129 +116,76 @@
 <div class="divider"></div>
 <div class="row">
   <div class="col s12">
-    <h3 id="숫자계산">숫자계산</h3>
-<ul>
-  <li>1 ~ max까지 더하는 메소드</li>
-</ul>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	1 2 3 4 5 6 7 8
-	8 7 6 5 4 3 2 1
-	| | | | | | | |
-	9 9 9 9 9 9 9 9
-
-	(1 + 8) * 8 / 2 = 36
-</code></pre></div></div>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
- * 1 ~ max 까지 더하는 함수
- * @param max
- * @return
- */</span>
-<span class="kd">public</span> <span class="kt">long</span> <span class="nf">sum</span><span class="o">(</span><span class="kt">long</span> <span class="n">max</span><span class="o">){</span>
-	<span class="kt">long</span> <span class="n">sum</span> <span class="o">=</span> <span class="o">(</span><span class="n">max</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span> <span class="o">*</span> <span class="n">max</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
-	<span class="c1">//for(int i = 1; i &lt;= max; i++) sum += i;</span>
-
-	<span class="k">return</span> <span class="n">sum</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
+    <p><strong>숫자계산</strong></p>
 
 <ul>
-  <li>1 ~ max까지 홀수만 더하는 메소드</li>
+  <li>1 ~ max까지 더하는 메소드
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  1 2 3 4 5 6 7 8
+  8 7 6 5 4 3 2 1
+  | | | | | | | |
+  9 9 9 9 9 9 9 9
+
+  (1 + 8) * 8 / 2 = 36
+</code></pre></div>    </div>
+    <p>code :</p>
+  </li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	1 3 5     = 9     3 * 3 = 9
-	1 3 5 7   = 16    4 * 4 = 16
-	1 3 5 7 9 = 25    5 * 5 = 25
-
-	홀수갯수의 제곱
-</code></pre></div></div>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
- * 1 ~ max 까지 홀수만 더하는 함수(홀수갯수의 제곱)
- * @param max
- * @return
- */</span>
-<span class="kd">public</span> <span class="kt">long</span> <span class="nf">sumOdd</span><span class="o">(</span><span class="kt">long</span> <span class="n">max</span><span class="o">){</span>
-	<span class="kt">long</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-	<span class="k">if</span><span class="o">(</span><span class="n">max</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="n">max</span><span class="o">++;</span>
-
-	<span class="n">count</span> <span class="o">=</span> <span class="n">max</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
-
-	<span class="k">return</span> <span class="n">count</span> <span class="o">*</span> <span class="n">count</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" />2<br data-jekyll-commonmark-ghpages="" />3<br data-jekyll-commonmark-ghpages="" />4<br data-jekyll-commonmark-ghpages="" />5<br data-jekyll-commonmark-ghpages="" />6<br data-jekyll-commonmark-ghpages="" />7<br data-jekyll-commonmark-ghpages="" />8<br data-jekyll-commonmark-ghpages="" />9<br data-jekyll-commonmark-ghpages="" />10<br data-jekyll-commonmark-ghpages="" />11<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="cm">/**<br data-jekyll-commonmark-ghpages="" /> * 1 ~ max 까지 더하는 함수<br data-jekyll-commonmark-ghpages="" /> * @param max<br data-jekyll-commonmark-ghpages="" /> * @return<br data-jekyll-commonmark-ghpages="" /> */</span><br data-jekyll-commonmark-ghpages="" /><span class="kd">public</span> <span class="kt">long</span> <span class="nf">sum</span><span class="o">(</span><span class="kt">long</span> <span class="n">max</span><span class="o">){</span><br data-jekyll-commonmark-ghpages="" />	<span class="kt">long</span> <span class="n">sum</span> <span class="o">=</span> <span class="o">(</span><span class="n">max</span> <span class="o">+</span> <span class="mi">1</span><span class="o">)</span> <span class="o">*</span> <span class="n">max</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" />	<span class="c1">//for(int i = 1; i &lt;= max; i++) sum += i;</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" />	<span class="k">return</span> <span class="n">sum</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" /><span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <ul>
-  <li>1 ~ max까지 짝수만 더하는 메소드</li>
+  <li>1 ~ max까지 홀수만 더하는 메소드
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  1 3 5     = 9     3 * 3 = 9
+  1 3 5 7   = 16    4 * 4 = 16
+  1 3 5 7 9 = 25    5 * 5 = 25
+
+  홀수갯수의 제곱
+</code></pre></div>    </div>
+    <p>code :</p>
+  </li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	2 4     = 9     2 * 2 + 2 = 6
-	2 4 6   = 16    3 * 3 + 3 = 12
-	2 4 6 8 = 25    4 * 4 + 4 = 20
-
-	짝수갯수의 제곱 + 짝수갯수
-</code></pre></div></div>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
- * 1 ~ max 까지 짝수만 더하는 함수(짝수갯수의 제곱 + 짝수갯수)
- * @param max
- * @return
- */</span>
-<span class="kd">public</span> <span class="kt">long</span> <span class="nf">sumEven</span><span class="o">(</span><span class="kt">long</span> <span class="n">max</span><span class="o">){</span>
-	<span class="kt">long</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-	<span class="k">if</span><span class="o">(</span><span class="n">max</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="n">max</span><span class="o">--;</span>
-
-	<span class="n">count</span> <span class="o">=</span> <span class="n">max</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span>
-
-	<span class="k">return</span> <span class="n">count</span> <span class="o">*</span> <span class="n">count</span> <span class="o">+</span> <span class="n">count</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<h3 id="math-관련">Math 관련</h3>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" />2<br data-jekyll-commonmark-ghpages="" />3<br data-jekyll-commonmark-ghpages="" />4<br data-jekyll-commonmark-ghpages="" />5<br data-jekyll-commonmark-ghpages="" />6<br data-jekyll-commonmark-ghpages="" />7<br data-jekyll-commonmark-ghpages="" />8<br data-jekyll-commonmark-ghpages="" />9<br data-jekyll-commonmark-ghpages="" />10<br data-jekyll-commonmark-ghpages="" />11<br data-jekyll-commonmark-ghpages="" />12<br data-jekyll-commonmark-ghpages="" />13<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="cm">/**<br data-jekyll-commonmark-ghpages="" /> * 1 ~ max 까지 홀수만 더하는 함수(홀수갯수의 제곱)<br data-jekyll-commonmark-ghpages="" /> * @param max<br data-jekyll-commonmark-ghpages="" /> * @return<br data-jekyll-commonmark-ghpages="" /> */</span><br data-jekyll-commonmark-ghpages="" /><span class="kd">public</span> <span class="kt">long</span> <span class="nf">sumOdd</span><span class="o">(</span><span class="kt">long</span> <span class="n">max</span><span class="o">){</span><br data-jekyll-commonmark-ghpages="" />	<span class="kt">long</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" />	<span class="k">if</span><span class="o">(</span><span class="n">max</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="n">max</span><span class="o">++;</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" />	<span class="n">count</span> <span class="o">=</span> <span class="n">max</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" />	<span class="k">return</span> <span class="n">count</span> <span class="o">*</span> <span class="n">count</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" /><span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <ul>
-  <li>abs - 절대값 구하기</li>
+  <li>1 ~ max까지 짝수만 더하는 메소드
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  2 4     = 9     2 * 2 + 2 = 6
+  2 4 6   = 16    3 * 3 + 3 = 12
+  2 4 6 8 = 25    4 * 4 + 4 = 20
+
+  짝수갯수의 제곱 + 짝수갯수
+</code></pre></div>    </div>
+    <p>code :</p>
+  </li>
 </ul>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 절대값 구하기</span>
-<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(-</span><span class="mi">123</span><span class="o">);</span>
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" />2<br data-jekyll-commonmark-ghpages="" />3<br data-jekyll-commonmark-ghpages="" />4<br data-jekyll-commonmark-ghpages="" />5<br data-jekyll-commonmark-ghpages="" />6<br data-jekyll-commonmark-ghpages="" />7<br data-jekyll-commonmark-ghpages="" />8<br data-jekyll-commonmark-ghpages="" />9<br data-jekyll-commonmark-ghpages="" />10<br data-jekyll-commonmark-ghpages="" />11<br data-jekyll-commonmark-ghpages="" />12<br data-jekyll-commonmark-ghpages="" />13<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="cm">/**<br data-jekyll-commonmark-ghpages="" /> * 1 ~ max 까지 짝수만 더하는 함수(짝수갯수의 제곱 + 짝수갯수)<br data-jekyll-commonmark-ghpages="" /> * @param max<br data-jekyll-commonmark-ghpages="" /> * @return<br data-jekyll-commonmark-ghpages="" /> */</span><br data-jekyll-commonmark-ghpages="" /><span class="kd">public</span> <span class="kt">long</span> <span class="nf">sumEven</span><span class="o">(</span><span class="kt">long</span> <span class="n">max</span><span class="o">){</span><br data-jekyll-commonmark-ghpages="" />	<span class="kt">long</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" />	<span class="k">if</span><span class="o">(</span><span class="n">max</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="n">max</span><span class="o">--;</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" />	<span class="n">count</span> <span class="o">=</span> <span class="n">max</span> <span class="o">/</span> <span class="mi">2</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" />	<span class="k">return</span> <span class="n">count</span> <span class="o">*</span> <span class="n">count</span> <span class="o">+</span> <span class="n">count</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" /><span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
 
-<ul>
-  <li>round - 반올림 구하기</li>
-</ul>
+<p><strong>Math 관련</strong></p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 반올림</span>
-<span class="kt">long</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">round</span><span class="o">(</span><span class="mf">123.5</span><span class="o">);</span>
-</code></pre></div></div>
+<p>abs(절대값) :</p>
 
-<ul>
-  <li>ceil - 올림 구하기</li>
-</ul>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(-</span><span class="mi">123</span><span class="o">);</span></pre></td></tr></tbody></table></code></pre></figure>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 올림</span>
-<span class="kt">double</span> <span class="n">c</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">(</span><span class="mf">123.4</span><span class="o">);</span>
-</code></pre></div></div>
+<p>round(반올림) :</p>
 
-<ul>
-  <li>floor - 내림 구하기</li>
-</ul>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="kt">long</span> <span class="n">b</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">round</span><span class="o">(</span><span class="mf">123.5</span><span class="o">);</span></pre></td></tr></tbody></table></code></pre></figure>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 내림</span>
-<span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="mf">123.5</span><span class="o">);</span>
-</code></pre></div></div>
+<p>ceil(올림) :</p>
 
-<ul>
-  <li>random - 랜덤값 구하기</li>
-</ul>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="kt">double</span> <span class="n">c</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">ceil</span><span class="o">(</span><span class="mf">123.4</span><span class="o">);</span></pre></td></tr></tbody></table></code></pre></figure>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Math</span><span class="o">.</span><span class="na">random</span><span class="o">();</span> <span class="c1">// 0보다 크가나 같고 1보다 작은 실수를 리턴</span>
-</code></pre></div></div>
+<p>floor(내림) :</p>
 
-<h3 id="일반적인-random값-사용-관련">일반적인 Random값 사용 관련</h3>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">floor</span><span class="o">(</span><span class="mf">123.5</span><span class="o">);</span></pre></td></tr></tbody></table></code></pre></figure>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		<span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="o">();</span>
-		<span class="c1">// 1부터 100사이의 랜덤한 숫자 가져오기</span>
-		<span class="n">random</span><span class="o">.</span><span class="na">nextInt</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span> <span class="c1">// 0 ~ 99사이의 정수가 리턴</span>
-		<span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="na">nextInt</span><span class="o">(</span><span class="mi">100</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> <span class="c1">// 1~ 100사이의 정수가 리턴</span>
-</code></pre></div></div>
+<p>random(랜덤값) :</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="n">Math</span><span class="o">.</span><span class="na">random</span><span class="o">();</span> <span class="c1">// 0보다 크가나 같고 1보다 작은 실수를 리턴</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>일반적인 Random값 사용 :</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" />2<br data-jekyll-commonmark-ghpages="" />3<br data-jekyll-commonmark-ghpages="" />4<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="n">Random</span> <span class="n">random</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="o">();</span><br data-jekyll-commonmark-ghpages="" /><span class="c1">// 1부터 100사이의 랜덤한 숫자 가져오기</span><br data-jekyll-commonmark-ghpages="" /><span class="n">random</span><span class="o">.</span><span class="na">nextInt</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span> <span class="c1">// 0 ~ 99사이의 정수가 리턴</span><br data-jekyll-commonmark-ghpages="" /><span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="na">nextInt</span><span class="o">(</span><span class="mi">100</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> <span class="c1">// 1~ 100사이의 정수가 리턴</span></pre></td></tr></tbody></table></code></pre></figure>
 
   </div>
 </div>

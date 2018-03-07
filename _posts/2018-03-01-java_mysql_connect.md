@@ -5,17 +5,14 @@ date:   2017-03-01 09:00:00 +0800
 categories: Java
 tags: Java mySql
 ---
-### Connector 설치
-
+**Connector 설치**  
 - osx의 경우 [Connector/j](https://dev.mysql.com/downloads/connector/j/5.1.html)를 다운로드한다
 - 이클립스 프로젝트 속성 - Java build path - Libraries - Add External jre로 다운받은 파일 추가하면 완료
 
 
-### 사용법
-
-- 드라이버 동적 로드
-
-```java
+**사용법**  
+드라이버 동적 로드 :
+{% highlight java linenos %}
 public ModelWithDB(){
 	// 특정 컴퓨터를 찾기위한 주소 체계
 	// 아이피 = 213.12.142.132
@@ -40,12 +37,11 @@ public ModelWithDB(){
 		ex.printStackTrace();
 	}
 }
-```
+{% endhighlight %}
 
 
-- Connection 맺기
-
-```java
+Connection 맺기 :
+{% highlight java linenos %}
 private final String URL = "jdbc:mysql://localhost:3306/memo";
 private final String USER = "root";
 private final String PASS = "root";
@@ -60,12 +56,11 @@ private Connection getConnection(){
 
 	return null;
 }
-```
+{% endhighlight %}
 
 
-- Statement를 사용한 쿼리실행
-
-```java
+Statement를 사용한 쿼리실행 :
+{% highlight java linenos %}
 public ArrayList<Memo> getList(){
 
 	ArrayList<Memo> list = new ArrayList<Memo>();
@@ -99,12 +94,11 @@ public ArrayList<Memo> getList(){
 
 	return list;
 }
-```
+{% endhighlight %}
 
 
-- PreparedStatement를 사용한 쿼리실행(Statement 보다 속도가 빠르다)
-
-```java
+PreparedStatement를 사용한 쿼리실행(Statement 보다 속도가 빠르다) :
+{% highlight java linenos %}
 public void create(Memo memo){
 	// 1. 데이터베이스 연결
 	Connection conn = getConnection();
@@ -130,4 +124,4 @@ public void create(Memo memo){
 		ex.printStackTrace();
 	}
 }
-```
+{% endhighlight %}

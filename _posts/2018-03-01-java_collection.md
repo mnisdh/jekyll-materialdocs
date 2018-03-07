@@ -5,9 +5,10 @@ date:   2017-03-01 09:00:00 +0800
 categories: Java
 tags: Java Collection
 ---
-### Array
+**Collection 종류**  
 
-```java
+Array :
+{% highlight java linenos %}
 /**
  * 선언
  * 타입[] 이름 = new 타입[배열공간크기];
@@ -23,12 +24,11 @@ public void checkArray(){
 	for(int i = 0; i < itemLength; i++) itemArray[i] = new Item();
 	System.out.println(itemArray[7].getMyName());
 }
-```
+{% endhighlight %}
 
 
-### List
-
-```java
+List :
+{% highlight java linenos %}
 /**
  * Index를 포함하는 동적 객체배열
  */
@@ -53,12 +53,11 @@ public void checkList(){
 	// 삭제
 	list.remove(1); // index가 1번인 것을 삭제
 }
-```
+{% endhighlight %}
 
 
-### Generic 사용
-
-```java
+Generic 사용 :
+{% highlight java linenos %}
 /**
  * 제네릭을 사용하는 방법
  * 타입<제네릭타입> 변수이름;    <- 제네릭타입은 클래스만 가능
@@ -70,12 +69,11 @@ public void checkGeneric(){
 
 	for(Item item : list) item.getMyName();
 }
-```
+{% endhighlight %}
 
 
-### Set
-
-```java
+Set :
+{% highlight java linenos %}
 /**
  * List와 유사하나 중복값을 허용하지 않는 동적 객체배열
  */
@@ -94,12 +92,11 @@ public void checkSet(){
 	Iterator<String> iterator = set.iterator();
 	while(iterator.hasNext()) iterator.next();
 }
-```
+{% endhighlight %}
 
 
-### Map
-
-```java
+Map :
+{% highlight java linenos %}
 /**
  * Key, Value로 구성된 동적 객체배열
  */
@@ -117,4 +114,4 @@ public void checkMap(){
 	// map을 반복문으로 처리하기
 	for(String key : map.keySet()) map.get(key);
 }
-```
+{% endhighlight %}

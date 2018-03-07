@@ -5,21 +5,19 @@ date:   2017-03-01 09:00:00 +0800
 categories: Android
 tags: Android ListView
 ---
-### MainActivity class
+**List View 설명**  
 
-```java
+MainActivity class :
+{% highlight java linenos %}
 package android.daehoshin.com.basiclist;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
-
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 리스트뷰 사용하기
- */
+//리스트뷰 사용하기
 public class MainActivity extends AppCompatActivity {
     // 1.데이터를 정의
     List<String> data = new ArrayList<>();
@@ -39,12 +37,11 @@ public class MainActivity extends AppCompatActivity {
         ((ListView) findViewById(R.id.lvId)).setAdapter(adapter);
     }
 }
-```
+{% endhighlight %}
 
 
-### CustomAdapter class
-
-```java
+CustomAdapter class :
+{% highlight java linenos %}
 package android.daehoshin.com.basiclist;
 
 import android.content.Context;
@@ -57,11 +54,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * 기본 어답터 클래스를 상속받아 구현
- *
- * Created by daeho on 2017. 9. 19..
- */
+//기본 어답터 클래스를 상속받아 구현
 public class CustomAdapter extends BaseAdapter {
     // 데이터 저장소를 아답터 내부에 두는것이 컨트롤 하기 편하다
     List<String> data;
@@ -118,17 +111,11 @@ public class CustomAdapter extends BaseAdapter {
         return convertView;
     }
 
-    /**
-     * list_item 의 위젯 수정을 편하게 하기위한 클래스
-     */
+    //list_item 의 위젯 수정을 편하게 하기위한 클래스
     class Holder{
         private TextView tvText;
 
-        /**
-         * tvText 설정시 onClickListener 연결
-         *
-         * @param tvText
-         */
+        //tvText 설정시 onClickListener 연결
         public void setTvText(TextView tvText){
             this.tvText = tvText;
             this.tvText.setOnClickListener(new View.OnClickListener() {
@@ -148,12 +135,11 @@ public class CustomAdapter extends BaseAdapter {
         }
     }
 }
-```
+{% endhighlight %}
 
 
-### DetailActivity class
-
-```java
+DetailActivity class :
+{% highlight java linenos %}
 package android.daehoshin.com.basiclist;
 
 import android.content.Intent;
@@ -162,7 +148,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -181,4 +166,4 @@ public class DetailActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.tvText)).setText(result);
     }
 }
-```
+{% endhighlight %}

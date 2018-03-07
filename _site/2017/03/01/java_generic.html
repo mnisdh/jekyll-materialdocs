@@ -112,56 +112,24 @@
 <div class="divider"></div>
 <div class="row">
   <div class="col s12">
-    <h3 id="generic">Generic</h3>
+    <p><strong>Generic</strong></p>
 <ul>
   <li>클래스의 타입을 parameter로 만든 것이다</li>
   <li>다루는 클래스의 타입을 일반적으로 선언하면서도 Object가 아닌 실제 클래스 타입을 명시하므로써 형변환없이도 사용할수 있게 해준다</li>
   <li>Object로 여러 타입을 받아서 사용할 수있으나 형변환을 잘못하면 runtime시에 잘못을 확인되는데 Generic사용시는 사전에 타입을 확인하므로 유용하다</li>
 </ul>
 
-<h3 id="class에서-사용시">Class에서 사용시</h3>
+<p>Class에서 사용시 :</p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Part</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
-	<span class="kd">private</span> <span class="n">T</span> <span class="n">part</span><span class="o">;</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" />2<br data-jekyll-commonmark-ghpages="" />3<br data-jekyll-commonmark-ghpages="" />4<br data-jekyll-commonmark-ghpages="" />5<br data-jekyll-commonmark-ghpages="" />6<br data-jekyll-commonmark-ghpages="" />7<br data-jekyll-commonmark-ghpages="" />8<br data-jekyll-commonmark-ghpages="" />9<br data-jekyll-commonmark-ghpages="" />10<br data-jekyll-commonmark-ghpages="" />11<br data-jekyll-commonmark-ghpages="" />12<br data-jekyll-commonmark-ghpages="" />13<br data-jekyll-commonmark-ghpages="" />14<br data-jekyll-commonmark-ghpages="" />15<br data-jekyll-commonmark-ghpages="" />16<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Part</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span><br data-jekyll-commonmark-ghpages="" />	<span class="kd">private</span> <span class="n">T</span> <span class="n">part</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" />	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">set</span><span class="o">(</span><span class="n">T</span> <span class="n">part</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">part</span> <span class="o">=</span> <span class="n">part</span><span class="o">;</span> <span class="o">}</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" />	<span class="kd">public</span> <span class="n">T</span> <span class="nf">get</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">part</span><span class="o">;</span> <span class="o">}</span><br data-jekyll-commonmark-ghpages="" /><span class="o">}</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" /><span class="kd">public</span> <span class="kd">class</span> <span class="nf">Test</span><span class="o">(){</span><br data-jekyll-commonmark-ghpages="" />	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">Main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span><br data-jekyll-commonmark-ghpages="" />		<span class="n">Part</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">part</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Part</span><span class="o">&lt;&gt;();</span><br data-jekyll-commonmark-ghpages="" />		<span class="c1">// String 이외의 다른타입은 넣을수 없음</span><br data-jekyll-commonmark-ghpages="" />		<span class="n">part</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span><br data-jekyll-commonmark-ghpages="" />		<span class="n">String</span> <span class="n">text</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="na">get</span><span class="o">();</span><br data-jekyll-commonmark-ghpages="" />	<span class="o">}</span><br data-jekyll-commonmark-ghpages="" /><span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
 
-	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">set</span><span class="o">(</span><span class="n">T</span> <span class="n">part</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">part</span> <span class="o">=</span> <span class="n">part</span><span class="o">;</span> <span class="o">}</span>
+<p>생성자에서 사용시 :</p>
 
-	<span class="kd">public</span> <span class="n">T</span> <span class="nf">get</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">part</span><span class="o">;</span> <span class="o">}</span>
-<span class="o">}</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" />2<br data-jekyll-commonmark-ghpages="" />3<br data-jekyll-commonmark-ghpages="" />4<br data-jekyll-commonmark-ghpages="" />5<br data-jekyll-commonmark-ghpages="" />6<br data-jekyll-commonmark-ghpages="" />7<br data-jekyll-commonmark-ghpages="" />8<br data-jekyll-commonmark-ghpages="" />9<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Part</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">S</span><span class="o">&gt;{</span><br data-jekyll-commonmark-ghpages="" />	<span class="kd">private</span> <span class="n">T</span> <span class="n">item1</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" />	<span class="kd">private</span> <span class="n">S</span> <span class="n">item2</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" />	<span class="kd">public</span> <span class="nf">Part</span><span class="o">(</span><span class="n">T</span> <span class="n">t</span><span class="o">,</span> <span class="n">S</span> <span class="n">s</span><span class="o">){</span><br data-jekyll-commonmark-ghpages="" />		<span class="k">this</span><span class="o">.</span><span class="na">item1</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" />		<span class="k">this</span><span class="o">.</span><span class="na">item2</span> <span class="o">=</span> <span class="n">s</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" />	<span class="o">}</span><br data-jekyll-commonmark-ghpages="" /><span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nf">Test</span><span class="o">(){</span>
-	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">Main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
-		<span class="n">Part</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">part</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Part</span><span class="o">&lt;&gt;();</span>
-		<span class="c1">// String 이외의 다른타입은 넣을수 없음</span>
-		<span class="n">part</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"test"</span><span class="o">);</span>
-		<span class="n">String</span> <span class="n">text</span> <span class="o">=</span> <span class="n">part</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<p>Method에서 사용시 :</p>
 
-<h3 id="생성자에서-사용시">생성자에서 사용시</h3>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Part</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">S</span><span class="o">&gt;{</span>
-	<span class="kd">private</span> <span class="n">T</span> <span class="n">item1</span><span class="o">;</span>
-	<span class="kd">private</span> <span class="n">S</span> <span class="n">item2</span><span class="o">;</span>
-
-	<span class="kd">public</span> <span class="nf">Part</span><span class="o">(</span><span class="n">T</span> <span class="n">t</span><span class="o">,</span> <span class="n">S</span> <span class="n">s</span><span class="o">){</span>
-		<span class="k">this</span><span class="o">.</span><span class="na">item1</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span>
-		<span class="k">this</span><span class="o">.</span><span class="na">item2</span> <span class="o">=</span> <span class="n">s</span><span class="o">;</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<h3 id="method에서-사용시">Method에서 사용시</h3>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//Class에선 T를 사용하지만</span>
-<span class="c1">//별개로 메소드에서 U로 다른 타입을 설정해서 사용가능함</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Part</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;{</span>
-	<span class="kd">public</span> <span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="nf">printPart</span><span class="o">(</span><span class="n">U</span> <span class="n">info</span><span class="o">){</span>
-		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">info</span><span class="o">);</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" />2<br data-jekyll-commonmark-ghpages="" />3<br data-jekyll-commonmark-ghpages="" />4<br data-jekyll-commonmark-ghpages="" />5<br data-jekyll-commonmark-ghpages="" />6<br data-jekyll-commonmark-ghpages="" />7<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="c1">//Class에선 T를 사용하지만</span><br data-jekyll-commonmark-ghpages="" /><span class="c1">//별개로 메소드에서 U로 다른 타입을 설정해서 사용가능함</span><br data-jekyll-commonmark-ghpages="" /><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Part</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;{</span><br data-jekyll-commonmark-ghpages="" />	<span class="kd">public</span> <span class="o">&lt;</span><span class="n">U</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="nf">printPart</span><span class="o">(</span><span class="n">U</span> <span class="n">info</span><span class="o">){</span><br data-jekyll-commonmark-ghpages="" />		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">info</span><span class="o">);</span><br data-jekyll-commonmark-ghpages="" />	<span class="o">}</span><br data-jekyll-commonmark-ghpages="" /><span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
 
   </div>
 </div>

@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "Android CustomView"
+title:  "Android Custom View"
 date:   2017-03-01 09:00:00 +0800
 categories: Android
-tags: Android CustomView
+tags: Android Custom View
 ---
-### MainActivity class
+**Custom View 설명**  
 
-```java
+MainActivity class :
+{% highlight java linenos %}
 package android.daehoshin.com.coustomview;
 
 import android.content.Intent;
@@ -51,12 +52,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-```
+{% endhighlight %}
 
 
-### AniButton class
-
-```java
+AniButton class :
+{% highlight java linenos %}
 package android.daehoshin.com.coustomview;
 
 import android.animation.AnimatorSet;
@@ -157,12 +157,11 @@ public class AniButton extends AppCompatButton {
         }
     }
 }
-```
+{% endhighlight %}
 
 
-### CustomView class
-
-```java
+CustomView class :
+{% highlight java linenos %}
 package android.daehoshin.com.coustomview;
 
 import android.content.Context;
@@ -212,12 +211,11 @@ public class CustomView extends View {
         canvas.drawRect(100, 100, 200, 200, paint);
     }
 }
-```
+{% endhighlight %}
 
 
-### DrawActivity class
-
-```java
+DrawActivity class :
+{% highlight java linenos %}
 package android.daehoshin.com.coustomview;
 
 import android.graphics.Color;
@@ -290,12 +288,11 @@ public class DrawActivity extends AppCompatActivity {
         });
     }
 }
-```
+{% endhighlight %}
 
 
-### DrawView class
-
-```java
+DrawView class :
+{% highlight java linenos %}
 radioGroup.setOnCheckedChangeListener(radioCheckedChangeListener);
 
 RadioGroup.OnCheckedChangeListener radioCheckedChangeListener = new RadioGroup.OnCheckedChangeListener() {
@@ -317,13 +314,11 @@ RadioGroup.OnCheckedChangeListener radioCheckedChangeListener = new RadioGroup.O
                 break;
         }
     }
-}
-```
+{% endhighlight %}
 
 
-### PathTool class
-
-```java
+PathTool class :
+{% highlight java linenos %}
 spackage android.daehoshin.com.coustomview;
 
 import android.graphics.Path;
@@ -362,4 +357,4 @@ public class PathTool extends Path{
      */
     public float getSize() { return this.size; }
 }
-```
+{% endhighlight %}
