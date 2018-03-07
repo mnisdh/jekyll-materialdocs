@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+      Java Code 잔돈계산
+      
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="/mnisdh/assets/res/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/mnisdh/assets/css/main.css">
+    
+    
+    <link rel="stylesheet" href="/mnisdh/assets/css/post.css">
+    
+    
+    
+    <link rel="stylesheet" href="/mnisdh/assets/css/syntax.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/mnisdh/feed.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/mnisdh/sitemap.xml">
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<meta property="og:title" content="Java Code 잔돈계산" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="ChangeMain class(main)" />
+<meta property="og:description" content="ChangeMain class(main)" />
+<link rel="canonical" href="http://localhost:4000/mnisdh/2017/03/01/java-code_change" />
+<meta property="og:url" content="http://localhost:4000/mnisdh/2017/03/01/java-code_change" />
+<meta property="og:site_name" content="mnisdh" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-03-01T10:00:00+09:00" />
+<meta name="google-site-verification" content="UA-96359860-1" />
+<script type="application/ld+json">
+{"name":null,"description":"ChangeMain class(main)","author":null,"@type":"BlogPosting","url":"http://localhost:4000/mnisdh/2017/03/01/java-code_change","publisher":null,"image":null,"headline":"Java Code 잔돈계산","dateModified":"2017-03-01T10:00:00+09:00","datePublished":"2017-03-01T10:00:00+09:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mnisdh/2017/03/01/java-code_change"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav teal">
+        <div class="nav-wrapper">
+          <div class="container">
+            <a class="page-title" href="/mnisdh/">mnisdh</a>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+          <i class="material-icons">menu</i>
+        </a>
+      </div>
+      <ul id="slide-out" class="side-nav fixed">
+        <li>
+          <div class="userView">
+            <div class="background"></div>
+            <a href="https://github.com/mnisdh" target="_blank"><img class="circle z-depth-2" src="/mnisdh/assets/res/user.png"></a>
+            <span class="white-text name">Dae ho</span>
+            <span class="white-text email">mnisdh2@gmail.com</span>
+          </div>
+        </li>
+        <li><a class="waves-effect" href="/mnisdh/"><i class="material-icons">home</i>Home</a></li>
+        <li><a class="waves-effect" href="/mnisdh/projects"><i class="material-icons">description</i>Projects</a></li>
+        <li><a class="waves-effect" href="/mnisdh/categories"><i class="material-icons">sort</i>Categories</a></li>
+        <li><a class="waves-effect" href="/mnisdh/tags"><i class="material-icons">label</i>Tags</a></li>
+        <li><a class="waves-effect" href="/mnisdh/feed.xml" target="_blank"><i class="material-icons">rss_feed</i>RSS</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="/mnisdh/about"><i class="material-icons">person</i>About</a></li>
+        <li><a class="waves-effect" href="/mnisdh/contact"><i class="material-icons">email</i>Contact</a></li>
+      </ul>
+    </header>
+    <main>
+
+<div class="container">
+  <div id="post-info">
+  <h3>Java Code 잔돈계산</h3>
+  <ul class="collapsible hoverable" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Date">date_range</i>
+          01/03/2017 09:00
+          <i id="indicate" class="right material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Show extra info">info</i>
+        </span>
+      </div>
+      <div class="collapsible-body">
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Categories">sort</i>
+          
+          
+          
+          <a href="/mnisdh/categories#java-code_cap" target="_blank"><div class="chip">Java-Code</div></a>
+          
+        </span>
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Tags">label</i>
+          
+          
+          
+          <a href="/mnisdh/tags#java_cap" target="_blank"><div class="chip">Java</div></a>
+          
+          
+          
+          <a href="/mnisdh/tags#code_cap" target="_blank"><div class="chip">Code</div></a>
+          
+          
+          
+          <a href="/mnisdh/tags#잔돈계산_cap" target="_blank"><div class="chip">잔돈계산</div></a>
+          
+          
+          
+          <a href="/mnisdh/tags#interface_cap" target="_blank"><div class="chip">Interface</div></a>
+          
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="divider"></div>
+<div class="row">
+  <div class="col s12">
+    <h3 id="changemain-classmain">ChangeMain class(main)</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 지불금액과 구입금액을 입력받아 잔돈 계산</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">){</span>
+ <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+
+ <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"지불금액 : "</span><span class="o">);</span>
+ <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+ <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"구입금액 : "</span><span class="o">);</span>
+ <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+
+ <span class="c1">//반복문 사용한 코드</span>
+ <span class="n">Change</span> <span class="n">change</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Change</span><span class="o">();</span>
+ <span class="n">change</span><span class="o">.</span><span class="na">calc</span><span class="o">(</span><span class="n">num1</span><span class="o">,</span> <span class="n">num2</span><span class="o">);</span>
+
+ <span class="c1">//반복문 사용안한 코드</span>
+ <span class="c1">//ChangeMain cMain = new ChangeMain();</span>
+ <span class="c1">//cMain.calc(num1, num2);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="designichange-interface계산-메소드를-설계한-인터페이스">Design.IChange interface(계산 메소드를 설계한 인터페이스)</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">Design</span><span class="o">;</span>
+<span class="cm">/**
+* 인터페이스를 설계하는 방법
+* 접근제한자 + interface + 이름
+*
+* 설계된데로 구현하도록 강제화하는 방법
+*
+* 인터페이스에 맞는 메소드별로 모아서 생성할것
+*
+* @author daeho
+*
+*/</span>
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IChange</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">calc</span><span class="o">(</span><span class="kt">int</span> <span class="n">pay</span><span class="o">,</span> <span class="kt">int</span> <span class="n">buy</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="designichangeprint-interface출력-메소드를-설계한-인터페이스">Design.IChangePrint interface(출력 메소드를 설계한 인터페이스)</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">Design</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">IChangePrint</span> <span class="o">{</span>
+		<span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="n">String</span> <span class="n">flag</span><span class="o">,</span> <span class="kt">int</span> <span class="n">count</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="change-classichange-ichangeprint를-구현한-잔돈계산-class">Change class(IChange, IChangePrint를 구현한 잔돈계산 class)</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * 인터페이스를 구현하기
+ * class + 클래스명 + implements + 인터페이스명
+ * @author daeho
+ *
+ */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Change</span> <span class="kd">implements</span> <span class="n">Design</span><span class="o">.</span><span class="na">IChange</span><span class="o">,</span> <span class="n">Design</span><span class="o">.</span><span class="na">IChangePrint</span> <span class="o">{</span>
+	<span class="kt">int</span><span class="o">[]</span> <span class="n">changeArray</span> <span class="o">=</span> <span class="o">{</span><span class="mi">5000</span><span class="o">,</span> <span class="mi">1000</span><span class="o">,</span> <span class="mi">500</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">10</span><span class="o">};</span>
+
+	<span class="cm">/**
+	 * 거스름돈 계산
+	 * ---------반복---------------------
+	 * 잔돈계산
+	 * 잔돈을 현재 거스름돈으로 나눈후 나머지 저장
+	 * ---------------------------------
+	 * @param pay
+	 * @param buy
+	 */</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">calc</span><span class="o">(</span><span class="kt">int</span> <span class="n">pay</span><span class="o">,</span> <span class="kt">int</span> <span class="n">buy</span><span class="o">){</span>
+		<span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">pay</span> <span class="o">-</span> <span class="n">buy</span><span class="o">;</span>
+
+		<span class="c1">//System.out.printf("총거스름돈 : %,d원%n", result);</span>
+		<span class="n">print</span><span class="o">(</span><span class="s">"총거스름돈"</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
+
+		<span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">change</span> <span class="o">:</span> <span class="n">changeArray</span><span class="o">){</span>
+			<span class="c1">//System.out.printf("%d원 : %d개%n", change, result / change);</span>
+			<span class="n">print</span><span class="o">(</span><span class="n">change</span> <span class="o">+</span> <span class="s">""</span><span class="o">,</span> <span class="n">result</span> <span class="o">/</span> <span class="n">change</span><span class="o">);</span>
+			<span class="n">result</span> <span class="o">%=</span> <span class="n">change</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="n">String</span> <span class="n">flag</span><span class="o">,</span> <span class="kt">int</span> <span class="n">count</span><span class="o">){</span>
+		<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%d원 : %d개%n"</span><span class="o">,</span> <span class="n">flag</span><span class="o">,</span> <span class="n">count</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+  </div>
+</div>
+
+</div>
+
+    </main>
+    <footer class="page-footer teal">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <img src="/mnisdh/assets/res/logo.png" alt="logo"/>
+            <p class="grey-text text-lighten-4">Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
+</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          &#xA9; 2018 mnisdh. All rights reserved. Powered by <a href="https://github.com/ShawnTeoh/matjek">MatJek</a>.
+        </div>
+      </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    
+    
+    <script src="/mnisdh/assets/js/post.js"></script>
+    
+    
+    
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+      (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-96359860-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    <script src="/mnisdh/assets/js/main.js"></script>
+  </body>
+</html>

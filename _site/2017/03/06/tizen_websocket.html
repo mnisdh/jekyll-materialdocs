@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+      Tizen WebApp WebSocket
+      
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="/mnisdh/assets/res/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/mnisdh/assets/css/main.css">
+    
+    
+    <link rel="stylesheet" href="/mnisdh/assets/css/post.css">
+    
+    
+    
+    <link rel="stylesheet" href="/mnisdh/assets/css/syntax.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/mnisdh/feed.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/mnisdh/sitemap.xml">
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<meta property="og:title" content="Tizen WebApp WebSocket" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tizen Web application 개발시 WebSocket 사용" />
+<meta property="og:description" content="Tizen Web application 개발시 WebSocket 사용" />
+<link rel="canonical" href="http://localhost:4000/mnisdh/2017/03/06/tizen_websocket" />
+<meta property="og:url" content="http://localhost:4000/mnisdh/2017/03/06/tizen_websocket" />
+<meta property="og:site_name" content="mnisdh" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-03-06T18:35:13+09:00" />
+<meta name="google-site-verification" content="UA-96359860-1" />
+<script type="application/ld+json">
+{"name":null,"description":"Tizen Web application 개발시 WebSocket 사용","author":null,"@type":"BlogPosting","url":"http://localhost:4000/mnisdh/2017/03/06/tizen_websocket","publisher":null,"image":null,"headline":"Tizen WebApp WebSocket","dateModified":"2017-03-06T18:35:13+09:00","datePublished":"2017-03-06T18:35:13+09:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mnisdh/2017/03/06/tizen_websocket"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav teal">
+        <div class="nav-wrapper">
+          <div class="container">
+            <a class="page-title" href="/mnisdh/">mnisdh</a>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+          <i class="material-icons">menu</i>
+        </a>
+      </div>
+      <ul id="slide-out" class="side-nav fixed">
+        <li>
+          <div class="userView">
+            <div class="background"></div>
+            <a href="https://github.com/mnisdh" target="_blank"><img class="circle z-depth-2" src="/mnisdh/assets/res/user.png"></a>
+            <span class="white-text name">Dae ho</span>
+            <span class="white-text email">mnisdh2@gmail.com</span>
+          </div>
+        </li>
+        <li><a class="waves-effect" href="/mnisdh/"><i class="material-icons">home</i>Home</a></li>
+        <li><a class="waves-effect" href="/mnisdh/projects"><i class="material-icons">description</i>Projects</a></li>
+        <li><a class="waves-effect" href="/mnisdh/categories"><i class="material-icons">sort</i>Categories</a></li>
+        <li><a class="waves-effect" href="/mnisdh/tags"><i class="material-icons">label</i>Tags</a></li>
+        <li><a class="waves-effect" href="/mnisdh/feed.xml" target="_blank"><i class="material-icons">rss_feed</i>RSS</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="/mnisdh/about"><i class="material-icons">person</i>About</a></li>
+        <li><a class="waves-effect" href="/mnisdh/contact"><i class="material-icons">email</i>Contact</a></li>
+      </ul>
+    </header>
+    <main>
+
+<div class="container">
+  <div id="post-info">
+  <h3>Tizen WebApp WebSocket</h3>
+  <ul class="collapsible hoverable" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Date">date_range</i>
+          06/03/2017 17:35
+          <i id="indicate" class="right material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Show extra info">info</i>
+        </span>
+      </div>
+      <div class="collapsible-body">
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Categories">sort</i>
+          
+          
+          
+          <a href="/mnisdh/categories#tizen_cap" target="_blank"><div class="chip">Tizen</div></a>
+          
+        </span>
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Tags">label</i>
+          
+          
+          
+          <a href="/mnisdh/tags#tizen_cap" target="_blank"><div class="chip">Tizen</div></a>
+          
+          
+          
+          <a href="/mnisdh/tags#webapp_cap" target="_blank"><div class="chip">WebApp</div></a>
+          
+          
+          
+          <a href="/mnisdh/tags#websocket_cap" target="_blank"><div class="chip">WebSocket</div></a>
+          
+          
+          
+          <a href="/mnisdh/tags#background_cap" target="_blank"><div class="chip">Background</div></a>
+          
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="divider"></div>
+<div class="row">
+  <div class="col s12">
+    <p><strong>Tizen Web application 개발시 WebSocket 사용</strong></p>
+
+<p>필요한 권한
+config.xml :</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre>  <span class="nt">&lt;tizen:privilege</span> <span class="na">name=</span><span class="s">"http://tizen.org/privilege/internet"</span><span class="nt">/&gt;</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Tizen Web application 은 javascript, html5를 지원하며<br />
+현재 프로젝트에서 서버와 UDP통신을 하도록 설계되어 있었으나<br />
+javascript, html5, tizen 기본 제공모듈 에는 UDP, TCP 통신은 포함되어있지 않아서<br />
+결국 html5가 지원하는 WebSocket방식으로 변경하게 되었음<br />
+<a href="https://developer.tizen.org/ko/community/tip-tech/html5-features-on-tizen?langswitch=ko">참고한 Tizen Developer사이트 공식문서</a></p>
+
+<p>현재 프로젝트는 WebSocket에 항상 연결되어있어야 하므로<br />
+onclose()호출시 다시 커넥션 맺도록 되어있음<br />
+message를 받게되면 알람함수를 호출함</p>
+
+<p>Code :</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" />2<br data-jekyll-commonmark-ghpages="" />3<br data-jekyll-commonmark-ghpages="" />4<br data-jekyll-commonmark-ghpages="" />5<br data-jekyll-commonmark-ghpages="" />6<br data-jekyll-commonmark-ghpages="" />7<br data-jekyll-commonmark-ghpages="" />8<br data-jekyll-commonmark-ghpages="" />9<br data-jekyll-commonmark-ghpages="" />10<br data-jekyll-commonmark-ghpages="" />11<br data-jekyll-commonmark-ghpages="" />12<br data-jekyll-commonmark-ghpages="" />13<br data-jekyll-commonmark-ghpages="" />14<br data-jekyll-commonmark-ghpages="" />15<br data-jekyll-commonmark-ghpages="" />16<br data-jekyll-commonmark-ghpages="" />17<br data-jekyll-commonmark-ghpages="" />18<br data-jekyll-commonmark-ghpages="" />19<br data-jekyll-commonmark-ghpages="" />20<br data-jekyll-commonmark-ghpages="" />21<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">serverAddr</span> <span class="o">=</span> <span class="s2">"ws://"</span> <span class="o">+</span> <span class="nx">widget</span><span class="p">.</span><span class="nx">preferences</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">"ip"</span><span class="p">)</span> <span class="o">+</span> <span class="s2">":"</span> <span class="o">+</span> <span class="nx">widget</span><span class="p">.</span><span class="nx">preferences</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s2">"port"</span><span class="p">);</span><br data-jekyll-commonmark-ghpages="" /><span class="kd">var</span> <span class="nx">ws</span><span class="p">;</span><br data-jekyll-commonmark-ghpages="" /><span class="kd">var</span> <span class="nx">isFinish</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" /><span class="kd">function</span> <span class="nx">webSocketStart</span><span class="p">(){</span><br data-jekyll-commonmark-ghpages="" />    <span class="k">try</span> <span class="p">{</span><br data-jekyll-commonmark-ghpages="" />    	<span class="nx">ws</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WebSocket</span><span class="p">(</span><span class="nx">serverAddr</span><span class="p">);</span><br data-jekyll-commonmark-ghpages="" />    	<span class="nx">ws</span><span class="p">.</span><span class="nx">onmessage</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span><br data-jekyll-commonmark-ghpages="" />	    	<span class="nx">onAlarm</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span><br data-jekyll-commonmark-ghpages="" />	    <span class="p">};</span><br data-jekyll-commonmark-ghpages="" />	    <span class="nx">ws</span><span class="p">.</span><span class="nx">onclose</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span><br data-jekyll-commonmark-ghpages="" />	    	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">isFinish</span><span class="p">){</span><br data-jekyll-commonmark-ghpages="" />	    		<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span> <span class="nx">webSocketStart</span><span class="p">();</span> <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span><br data-jekyll-commonmark-ghpages="" />	    	<span class="p">}</span><br data-jekyll-commonmark-ghpages="" />	    <span class="p">};</span><br data-jekyll-commonmark-ghpages="" />    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span> <span class="nx">e</span> <span class="p">)</span> <span class="p">{</span><br data-jekyll-commonmark-ghpages="" />    	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">isFinish</span><span class="p">){</span><br data-jekyll-commonmark-ghpages="" />    		<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span> <span class="nx">webSocketStart</span><span class="p">();</span> <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span><br data-jekyll-commonmark-ghpages="" />    	<span class="p">}</span><br data-jekyll-commonmark-ghpages="" />    <span class="p">}</span><br data-jekyll-commonmark-ghpages="" /><span class="p">}</span></pre></td></tr></tbody></table></code></pre></figure>
+
+  </div>
+</div>
+
+</div>
+
+    </main>
+    <footer class="page-footer teal">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <img src="/mnisdh/assets/res/logo.png" alt="logo"/>
+            <p class="grey-text text-lighten-4">Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
+</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          &#xA9; 2018 mnisdh. All rights reserved. Powered by <a href="https://github.com/ShawnTeoh/matjek">MatJek</a>.
+        </div>
+      </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    
+    
+    <script src="/mnisdh/assets/js/post.js"></script>
+    
+    
+    
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+      (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-96359860-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    <script src="/mnisdh/assets/js/main.js"></script>
+  </body>
+</html>

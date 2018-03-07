@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+      Android Widget
+      
+    </title>
+    <link rel="shortcut icon" type="image/x-icon" href="/mnisdh/assets/res/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/mnisdh/assets/css/main.css">
+    
+    
+    <link rel="stylesheet" href="/mnisdh/assets/css/post.css">
+    
+    
+    
+    <link rel="stylesheet" href="/mnisdh/assets/css/syntax.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/mnisdh/feed.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/mnisdh/sitemap.xml">
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<meta property="og:title" content="Android Widget" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Toggle button" />
+<meta property="og:description" content="Toggle button" />
+<link rel="canonical" href="http://localhost:4000/mnisdh/2017/03/01/android_basic_widget" />
+<meta property="og:url" content="http://localhost:4000/mnisdh/2017/03/01/android_basic_widget" />
+<meta property="og:site_name" content="mnisdh" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-03-01T10:00:00+09:00" />
+<meta name="google-site-verification" content="UA-96359860-1" />
+<script type="application/ld+json">
+{"name":null,"description":"Toggle button","author":null,"@type":"BlogPosting","url":"http://localhost:4000/mnisdh/2017/03/01/android_basic_widget","publisher":null,"image":null,"headline":"Android Widget","dateModified":"2017-03-01T10:00:00+09:00","datePublished":"2017-03-01T10:00:00+09:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mnisdh/2017/03/01/android_basic_widget"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav teal">
+        <div class="nav-wrapper">
+          <div class="container">
+            <a class="page-title" href="/mnisdh/">mnisdh</a>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+          <i class="material-icons">menu</i>
+        </a>
+      </div>
+      <ul id="slide-out" class="side-nav fixed">
+        <li>
+          <div class="userView">
+            <div class="background"></div>
+            <a href="https://github.com/mnisdh" target="_blank"><img class="circle z-depth-2" src="/mnisdh/assets/res/user.png"></a>
+            <span class="white-text name">Dae ho</span>
+            <span class="white-text email">mnisdh2@gmail.com</span>
+          </div>
+        </li>
+        <li><a class="waves-effect" href="/mnisdh/"><i class="material-icons">home</i>Home</a></li>
+        <li><a class="waves-effect" href="/mnisdh/projects"><i class="material-icons">description</i>Projects</a></li>
+        <li><a class="waves-effect" href="/mnisdh/categories"><i class="material-icons">sort</i>Categories</a></li>
+        <li><a class="waves-effect" href="/mnisdh/tags"><i class="material-icons">label</i>Tags</a></li>
+        <li><a class="waves-effect" href="/mnisdh/feed.xml" target="_blank"><i class="material-icons">rss_feed</i>RSS</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="/mnisdh/about"><i class="material-icons">person</i>About</a></li>
+        <li><a class="waves-effect" href="/mnisdh/contact"><i class="material-icons">email</i>Contact</a></li>
+      </ul>
+    </header>
+    <main>
+
+<div class="container">
+  <div id="post-info">
+  <h3>Android Widget</h3>
+  <ul class="collapsible hoverable" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Date">date_range</i>
+          01/03/2017 09:00
+          <i id="indicate" class="right material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Show extra info">info</i>
+        </span>
+      </div>
+      <div class="collapsible-body">
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Categories">sort</i>
+          
+          
+          
+          <a href="/mnisdh/categories#android_cap" target="_blank"><div class="chip">Android</div></a>
+          
+        </span>
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Tags">label</i>
+          
+          
+          
+          <a href="/mnisdh/tags#android_cap" target="_blank"><div class="chip">Android</div></a>
+          
+          
+          
+          <a href="/mnisdh/tags#widget_cap" target="_blank"><div class="chip">Widget</div></a>
+          
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="divider"></div>
+<div class="row">
+  <div class="col s12">
+    <h3 id="toggle-button">Toggle button</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">toggleButton</span><span class="o">.</span><span class="na">setOnCheckedChangeListener</span><span class="o">(</span><span class="n">checkedChangeListener</span><span class="o">);</span>
+
+<span class="n">CompoundButton</span><span class="o">.</span><span class="na">OnCheckedChangeListener</span> <span class="n">checkedChangeListener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CompoundButton</span><span class="o">.</span><span class="na">OnCheckedChangeListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCheckedChanged</span><span class="o">(</span><span class="n">CompoundButton</span> <span class="n">buttonView</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">isChecked</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">switch</span> <span class="o">(</span><span class="n">buttonView</span><span class="o">.</span><span class="na">getId</span><span class="o">()){</span>
+            <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">toggleButton</span><span class="o">:</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">isChecked</span><span class="o">)</span> <span class="n">textView</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"토글이 눌렸습니다"</span><span class="o">);</span>
+                <span class="k">else</span> <span class="n">textView</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"토글이 해제되었습니다"</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+
+    <span class="o">}</span>
+<span class="o">};</span>
+</code></pre></div></div>
+
+<h3 id="switch">Switch</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">switch1</span><span class="o">.</span><span class="na">setOnCheckedChangeListener</span><span class="o">(</span><span class="n">checkedChangeListener</span><span class="o">);</span>
+
+<span class="n">CompoundButton</span><span class="o">.</span><span class="na">OnCheckedChangeListener</span> <span class="n">checkedChangeListener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CompoundButton</span><span class="o">.</span><span class="na">OnCheckedChangeListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCheckedChanged</span><span class="o">(</span><span class="n">CompoundButton</span> <span class="n">buttonView</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">isChecked</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">switch</span> <span class="o">(</span><span class="n">buttonView</span><span class="o">.</span><span class="na">getId</span><span class="o">()){</span>
+            <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">switch1</span><span class="o">:</span>
+                <span class="k">if</span><span class="o">(</span><span class="n">isChecked</span><span class="o">)</span> <span class="n">progressBar</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">VISIBLE</span><span class="o">);</span>
+                <span class="k">else</span> <span class="n">progressBar</span><span class="o">.</span><span class="na">setVisibility</span><span class="o">(</span><span class="n">View</span><span class="o">.</span><span class="na">INVISIBLE</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+
+    <span class="o">}</span>
+<span class="o">};</span>
+</code></pre></div></div>
+
+<h3 id="checkbox">Checkbox</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">chkCow</span><span class="o">.</span><span class="na">setOnCheckedChangeListener</span><span class="o">(</span><span class="n">checkBoxCheckedChangedListener</span><span class="o">);</span>
+<span class="n">chkPig</span><span class="o">.</span><span class="na">setOnCheckedChangeListener</span><span class="o">(</span><span class="n">checkBoxCheckedChangedListener</span><span class="o">);</span>
+<span class="n">chkDog</span><span class="o">.</span><span class="na">setOnCheckedChangeListener</span><span class="o">(</span><span class="n">checkBoxCheckedChangedListener</span><span class="o">);</span>
+
+<span class="n">CompoundButton</span><span class="o">.</span><span class="na">OnCheckedChangeListener</span> <span class="n">checkBoxCheckedChangedListener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CompoundButton</span><span class="o">.</span><span class="na">OnCheckedChangeListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCheckedChanged</span><span class="o">(</span><span class="n">CompoundButton</span> <span class="n">buttonView</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">isChecked</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+        <span class="k">if</span><span class="o">(</span><span class="n">chkCow</span><span class="o">.</span><span class="na">isChecked</span><span class="o">())</span> <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"cow"</span><span class="o">);</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">chkPig</span><span class="o">.</span><span class="na">isChecked</span><span class="o">())</span> <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"pig"</span><span class="o">);</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">chkDog</span><span class="o">.</span><span class="na">isChecked</span><span class="o">())</span> <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"dog"</span><span class="o">);</span>
+
+        <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">){</span>
+            <span class="k">for</span><span class="o">(</span><span class="n">String</span> <span class="n">i</span> <span class="o">:</span> <span class="n">list</span><span class="o">)</span> <span class="n">str</span> <span class="o">+=</span> <span class="s">","</span> <span class="o">+</span> <span class="n">i</span><span class="o">;</span>
+
+            <span class="n">textView</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="s">"가 체크되었습니다"</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">else</span><span class="o">{</span>
+            <span class="n">textView</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"전부 해지되었습니다"</span><span class="o">);</span>
+        <span class="o">}</span>
+
+    <span class="o">}</span>
+<span class="o">};</span>
+</code></pre></div></div>
+
+<h3 id="radiogroup">Radiogroup</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">radioGroup</span><span class="o">.</span><span class="na">setOnCheckedChangeListener</span><span class="o">(</span><span class="n">radioCheckedChangeListener</span><span class="o">);</span>
+
+<span class="n">RadioGroup</span><span class="o">.</span><span class="na">OnCheckedChangeListener</span> <span class="n">radioCheckedChangeListener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RadioGroup</span><span class="o">.</span><span class="na">OnCheckedChangeListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCheckedChanged</span><span class="o">(</span><span class="n">RadioGroup</span> <span class="n">group</span><span class="o">,</span> <span class="nd">@IdRes</span> <span class="kt">int</span> <span class="n">checkedId</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">switch</span> <span class="o">(</span><span class="n">checkedId</span><span class="o">){</span>
+            <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">rbtRed</span><span class="o">:</span>
+                <span class="n">textView</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"빨간불이 켜졌습니다"</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">rbtGreen</span><span class="o">:</span>
+                <span class="n">textView</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"초록불이 켜졌습니다"</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">rbtBlue</span><span class="o">:</span>
+                <span class="n">textView</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"파란불이 켜졌습니다"</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">rbtSpinner</span><span class="o">:</span>
+                <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span> <span class="n">SpinnerActivity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+                <span class="n">startActivity</span><span class="o">(</span><span class="n">intent</span><span class="o">);</span>
+                <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="seekbar">Seekbar</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">seekBar</span><span class="o">.</span><span class="na">setOnSeekBarChangeListener</span><span class="o">(</span><span class="n">seekBarChangeListener</span><span class="o">);</span>
+
+<span class="n">SeekBar</span><span class="o">.</span><span class="na">OnSeekBarChangeListener</span> <span class="n">seekBarChangeListener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SeekBar</span><span class="o">.</span><span class="na">OnSeekBarChangeListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onProgressChanged</span><span class="o">(</span><span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">,</span> <span class="kt">int</span> <span class="n">progress</span><span class="o">,</span> <span class="kt">boolean</span> <span class="n">fromUser</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">txtSeekBarResult</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">progress</span> <span class="o">+</span> <span class="s">""</span><span class="o">);</span>
+        <span class="n">ratingBar</span><span class="o">.</span><span class="na">setRating</span><span class="o">(</span><span class="n">progress</span><span class="o">/</span><span class="mi">100</span> <span class="o">*</span> <span class="n">ratingBar</span><span class="o">.</span><span class="na">getNumStars</span><span class="o">());</span>
+
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onStartTrackingTouch</span><span class="o">(</span><span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onStopTrackingTouch</span><span class="o">(</span><span class="n">SeekBar</span> <span class="n">seekBar</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="o">}</span>
+<span class="o">};</span>
+</code></pre></div></div>
+
+<h3 id="spinner">Spinner</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="n">android</span><span class="o">.</span><span class="na">daehoshin</span><span class="o">.</span><span class="na">com</span><span class="o">.</span><span class="na">basicwidget</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.view.View</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.AdapterView</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.ArrayAdapter</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.Spinner</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">android.widget.TextView</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SpinnerActivity</span> <span class="kd">extends</span> <span class="n">AppCompatActivity</span> <span class="o">{</span>
+    <span class="n">Spinner</span> <span class="n">spinner</span><span class="o">;</span>
+    <span class="n">TextView</span> <span class="n">txtResult</span><span class="o">;</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_spinner</span><span class="o">);</span>
+
+        <span class="c1">// 1. 스피너에 입력될 데이터 정의</span>
+        <span class="kd">final</span> <span class="n">String</span><span class="o">[]</span> <span class="n">data</span> <span class="o">=</span> <span class="o">{</span><span class="s">"월"</span><span class="o">,</span> <span class="s">"화"</span><span class="o">,</span> <span class="s">"수"</span><span class="o">,</span> <span class="s">"목"</span><span class="o">,</span> <span class="s">"금"</span><span class="o">,</span> <span class="s">"토"</span><span class="o">,</span> <span class="s">"일"</span><span class="o">};</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"월"</span><span class="o">);</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"화"</span><span class="o">);</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"수"</span><span class="o">);</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"목"</span><span class="o">);</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"금"</span><span class="o">);</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"토"</span><span class="o">);</span>
+        <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"일"</span><span class="o">);</span>
+
+        <span class="c1">// 2. 스피너와 데이터를 연결하는 아답터를 정의</span>
+        <span class="n">ArrayAdapter</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">arrayAdapter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayAdapter</span><span class="o">&lt;&gt;(</span><span class="k">this</span><span class="o">,</span> <span class="n">android</span><span class="o">.</span><span class="na">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">simple_list_item_1</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+
+        <span class="c1">// 3. 아답터와 스피너(리스트)를 연결</span>
+        <span class="n">spinner</span> <span class="o">=</span> <span class="o">(</span><span class="n">Spinner</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">spinner</span><span class="o">);</span>
+        <span class="n">spinner</span><span class="o">.</span><span class="na">setAdapter</span><span class="o">(</span><span class="n">arrayAdapter</span><span class="o">);</span>
+
+        <span class="n">txtResult</span> <span class="o">=</span> <span class="o">(</span><span class="n">TextView</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">txtResult</span><span class="o">);</span>
+
+        <span class="c1">// 4. 스피너에 리스너를 달아준다</span>
+        <span class="n">spinner</span><span class="o">.</span><span class="na">setOnItemSelectedListener</span><span class="o">(</span><span class="k">new</span> <span class="n">AdapterView</span><span class="o">.</span><span class="na">OnItemSelectedListener</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onItemSelected</span><span class="o">(</span><span class="n">AdapterView</span><span class="o">&lt;?&gt;</span> <span class="n">parent</span><span class="o">,</span> <span class="n">View</span> <span class="n">view</span><span class="o">,</span> <span class="kt">int</span> <span class="n">position</span><span class="o">,</span> <span class="kt">long</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">String</span> <span class="n">selectedValue</span> <span class="o">=</span> <span class="n">data</span><span class="o">[</span><span class="n">position</span><span class="o">];</span>
+                <span class="n">txtResult</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">selectedValue</span><span class="o">);</span>
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onNothingSelected</span><span class="o">(</span><span class="n">AdapterView</span><span class="o">&lt;?&gt;</span> <span class="n">parent</span><span class="o">)</span> <span class="o">{</span>
+
+            <span class="o">}</span>
+        <span class="o">});</span>
+
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+  </div>
+</div>
+
+</div>
+
+    </main>
+    <footer class="page-footer teal">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <img src="/mnisdh/assets/res/logo.png" alt="logo"/>
+            <p class="grey-text text-lighten-4">Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
+</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          &#xA9; 2018 mnisdh. All rights reserved. Powered by <a href="https://github.com/ShawnTeoh/matjek">MatJek</a>.
+        </div>
+      </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    
+    
+    <script src="/mnisdh/assets/js/post.js"></script>
+    
+    
+    
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+      (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-96359860-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    <script src="/mnisdh/assets/js/main.js"></script>
+  </body>
+</html>
