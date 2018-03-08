@@ -5,11 +5,11 @@ date:   2017-03-01 09:00:00 +0800
 categories: Java-Code
 tags: Java Code 로또 번호 생성기
 ---
-### 로또번호 생성기
-
+**로또번호 생성기**  
 랜덤값을 사용한 로또번호 생성기 연습
 
-```java
+code :
+{% highlight java linenos %}
 /**
  * 로또번호 생성기
  * 랜덤으로 번호 받아올때 중복된 값이있을 수 있으므로 중복체크 필요함
@@ -41,5 +41,5 @@ public int[] getLottoNumber(){
  		for(int item : nums) if(item == num) return true;
 
  		return false;
- 	}
-```
+}
+{% endhighlight %}

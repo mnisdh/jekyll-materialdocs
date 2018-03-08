@@ -5,32 +5,32 @@ date:   2017-03-01 09:00:00 +0800
 categories: Java-Code
 tags: Java Code 잔돈계산 Interface
 ---
-### ChangeMain class(main)
+**잔돈계산**  
 
-```java
+ChangeMain class(main) :
+{% highlight java linenos %}
 // 지불금액과 구입금액을 입력받아 잔돈 계산
 public static void main(String[] args){
- Scanner scanner = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 
- System.out.print("지불금액 : ");
- int num1 = scanner.nextInt();
- System.out.print("구입금액 : ");
- int num2 = scanner.nextInt();
+	System.out.print("지불금액 : ");
+	int num1 = scanner.nextInt();
+	System.out.print("구입금액 : ");
+	int num2 = scanner.nextInt();
 
- //반복문 사용한 코드
- Change change = new Change();
- change.calc(num1, num2);
+	//반복문 사용한 코드
+	Change change = new Change();
+	change.calc(num1, num2);
 
- //반복문 사용안한 코드
- //ChangeMain cMain = new ChangeMain();
- //cMain.calc(num1, num2);
+	//반복문 사용안한 코드
+	//ChangeMain cMain = new ChangeMain();
+	//cMain.calc(num1, num2);
 }
-```
+{% endhighlight %}
 
 
-### Design.IChange interface(계산 메소드를 설계한 인터페이스)
-
-```java
+Design.IChange interface(계산 메소드를 설계한 인터페이스) :
+{% highlight java linenos %}
 package Design;
 /**
 * 인터페이스를 설계하는 방법
@@ -46,23 +46,21 @@ package Design;
 public interface IChange {
 	public void calc(int pay, int buy);
 }
-```
+{% endhighlight %}
 
 
-### Design.IChangePrint interface(출력 메소드를 설계한 인터페이스)
-
-```java
+Design.IChangePrint interface(출력 메소드를 설계한 인터페이스) :
+{% highlight java linenos %}
 package Design;
 
 public interface IChangePrint {
 		public void print(String flag, int count);
 }
-```
+{% endhighlight %}
 
 
-### Change class(IChange, IChangePrint를 구현한 잔돈계산 class)
-
-```java
+Change class(IChange, IChangePrint를 구현한 잔돈계산 class) :
+{% highlight java linenos %}
 /**
  * 인터페이스를 구현하기
  * class + 클래스명 + implements + 인터페이스명
@@ -100,4 +98,4 @@ public class Change implements Design.IChange, Design.IChangePrint {
 		System.out.printf("%d원 : %d개%n", flag, count);
 	}
 }
-```
+{% endhighlight %}

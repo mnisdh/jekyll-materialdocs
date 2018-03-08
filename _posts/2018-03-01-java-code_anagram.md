@@ -5,9 +5,10 @@ date:   2017-03-01 09:00:00 +0800
 categories: Java-Code
 tags: Java Code Anagram String
 ---
-### 스트링을 활용한 알고리즘 풀이 (Anagram)
+**스트링을 활용한 알고리즘 풀이 (Anagram)**  
 
-```java
+code :
+{% highlight java linenos %}
 import java.util.Arrays;
 
 /**
@@ -39,4 +40,4 @@ public class Anagram {
 		return Arrays.equals(aChar, bChar);
 	}
 }
-```
+{% endhighlight %}

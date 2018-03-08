@@ -5,11 +5,11 @@ date:   2017-03-01 09:00:00 +0800
 categories: Java-Code
 tags: Java Code List Class Generic
 ---
-### Generic을 사용하여 List 클래스 만들기
+**Generic을 사용하여 List 클래스 만들기**  
 
-```java
+code :
+{% highlight java linenos %}
 package com.daehoshin.java.generic;
-
 
 /**
  * 제네릭을 사용하여 List 만들기
@@ -112,4 +112,4 @@ public class DHList<T> {
 		return (T) list[index];
 	}
 }
-```
+{% endhighlight %}

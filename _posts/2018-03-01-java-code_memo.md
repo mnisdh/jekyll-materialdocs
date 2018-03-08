@@ -5,10 +5,10 @@ date:   2017-03-01 09:00:00 +0800
 categories: Java-Code
 tags: Java Code 메모장 MVC mysql
 ---
+**메모장**  
 
-### MemoMain.java(메인 : 각클래스들을 연결해주는 역할)
-
-```java
+MemoMain.java(메인 : 각클래스들을 연결해주는 역할) :
+{% highlight java linenos %}
 import java.util.Scanner;
 
 /**
@@ -35,12 +35,11 @@ public class MemoMain {
 	}
 
 }
-```
+{% endhighlight %}
 
 
-### ModelWithDB.java(Model : mysql연동하여 데이터를 처리하는 역할)
-
-```java
+ModelWithDB.java(Model : mysql연동하여 데이터를 처리하는 역할) :
+{% highlight java linenos %}
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.ArrayList;
@@ -264,12 +263,11 @@ public class ModelWithDB {
 		return null;
 	}
 }
-```
+{% endhighlight %}
 
 
-### View.java(View : 화면의 입출력을 관리하는 역할)
-
-```java
+View.java(View : 화면의 입출력을 관리하는 역할) :
+{% highlight java linenos %}
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -394,12 +392,11 @@ public class View {
 		System.out.println(string);
 	}
 }
-```
+{% endhighlight %}
 
 
-### Control.java(Controller : Model과 View를 연결해주는 역할)
-
-```java
+Control.java(Controller : Model과 View를 연결해주는 역할) :
+{% highlight java linenos %}
 import java.util.Scanner;
 
 public class Control {
@@ -460,4 +457,4 @@ public class Control {
 		view.println("시스템이 종료되었습니다.");
 	}
 }
-```
+{% endhighlight %}

@@ -120,40 +120,11 @@
 <div class="divider"></div>
 <div class="row">
   <div class="col s12">
-    <h3 id="스트링을-활용한-알고리즘-풀이-anagram">스트링을 활용한 알고리즘 풀이 (Anagram)</h3>
+    <p><strong>스트링을 활용한 알고리즘 풀이 (Anagram)</strong></p>
 
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span>
+<p>code :</p>
 
-<span class="cm">/**
- * 아나그램 알고리즘
- * 두개의 문자열 입력을 받아서 두 개의 관계가
- * 아나그램 관계인지 확인하는 프로그램을 개발하세요
- * @author daeho
- *
- */</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Anagram</span> <span class="o">{</span>
-	<span class="cm">/**
-	 * listen == silent
-	 * cat == act
-	 * was it a cat i saw == was it a cat i saw
-	 *
-	 * @param a
-	 * @param b
-	 * @return
-	 */</span>
-	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checkAnagram</span><span class="o">(</span><span class="n">String</span> <span class="n">a</span><span class="o">,</span> <span class="n">String</span> <span class="n">b</span><span class="o">){</span>
-		<span class="kt">char</span><span class="o">[]</span> <span class="n">aChar</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">replace</span><span class="o">(</span><span class="s">" "</span><span class="o">,</span> <span class="s">""</span><span class="o">).</span><span class="na">toCharArray</span><span class="o">();</span>
-		<span class="kt">char</span><span class="o">[]</span> <span class="n">bChar</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">replace</span><span class="o">(</span><span class="s">" "</span><span class="o">,</span> <span class="s">""</span><span class="o">).</span><span class="na">toCharArray</span><span class="o">();</span>
-
-		<span class="k">if</span><span class="o">(</span><span class="n">aChar</span><span class="o">.</span><span class="na">length</span> <span class="o">!=</span> <span class="n">bChar</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
-
-		<span class="n">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">aChar</span><span class="o">);</span>
-		<span class="n">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">bChar</span><span class="o">);</span>
-
-		<span class="k">return</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">aChar</span><span class="o">,</span> <span class="n">bChar</span><span class="o">);</span>
-	<span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1<br data-jekyll-commonmark-ghpages="" />2<br data-jekyll-commonmark-ghpages="" />3<br data-jekyll-commonmark-ghpages="" />4<br data-jekyll-commonmark-ghpages="" />5<br data-jekyll-commonmark-ghpages="" />6<br data-jekyll-commonmark-ghpages="" />7<br data-jekyll-commonmark-ghpages="" />8<br data-jekyll-commonmark-ghpages="" />9<br data-jekyll-commonmark-ghpages="" />10<br data-jekyll-commonmark-ghpages="" />11<br data-jekyll-commonmark-ghpages="" />12<br data-jekyll-commonmark-ghpages="" />13<br data-jekyll-commonmark-ghpages="" />14<br data-jekyll-commonmark-ghpages="" />15<br data-jekyll-commonmark-ghpages="" />16<br data-jekyll-commonmark-ghpages="" />17<br data-jekyll-commonmark-ghpages="" />18<br data-jekyll-commonmark-ghpages="" />19<br data-jekyll-commonmark-ghpages="" />20<br data-jekyll-commonmark-ghpages="" />21<br data-jekyll-commonmark-ghpages="" />22<br data-jekyll-commonmark-ghpages="" />23<br data-jekyll-commonmark-ghpages="" />24<br data-jekyll-commonmark-ghpages="" />25<br data-jekyll-commonmark-ghpages="" />26<br data-jekyll-commonmark-ghpages="" />27<br data-jekyll-commonmark-ghpages="" />28<br data-jekyll-commonmark-ghpages="" />29<br data-jekyll-commonmark-ghpages="" />30<br data-jekyll-commonmark-ghpages="" />31<br data-jekyll-commonmark-ghpages="" /></pre></td><td class="code"><pre><span class="kn">import</span> <span class="nn">java.util.Arrays</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" /><span class="cm">/**<br data-jekyll-commonmark-ghpages="" /> * 아나그램 알고리즘<br data-jekyll-commonmark-ghpages="" /> * 두개의 문자열 입력을 받아서 두 개의 관계가<br data-jekyll-commonmark-ghpages="" /> * 아나그램 관계인지 확인하는 프로그램을 개발하세요<br data-jekyll-commonmark-ghpages="" /> * @author daeho<br data-jekyll-commonmark-ghpages="" /> *<br data-jekyll-commonmark-ghpages="" /> */</span><br data-jekyll-commonmark-ghpages="" /><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Anagram</span> <span class="o">{</span><br data-jekyll-commonmark-ghpages="" />	<span class="cm">/**<br data-jekyll-commonmark-ghpages="" />	 * listen == silent<br data-jekyll-commonmark-ghpages="" />	 * cat == act<br data-jekyll-commonmark-ghpages="" />	 * was it a cat i saw == was it a cat i saw<br data-jekyll-commonmark-ghpages="" />	 *<br data-jekyll-commonmark-ghpages="" />	 * @param a<br data-jekyll-commonmark-ghpages="" />	 * @param b<br data-jekyll-commonmark-ghpages="" />	 * @return<br data-jekyll-commonmark-ghpages="" />	 */</span><br data-jekyll-commonmark-ghpages="" />	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">checkAnagram</span><span class="o">(</span><span class="n">String</span> <span class="n">a</span><span class="o">,</span> <span class="n">String</span> <span class="n">b</span><span class="o">){</span><br data-jekyll-commonmark-ghpages="" />		<span class="kt">char</span><span class="o">[]</span> <span class="n">aChar</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">replace</span><span class="o">(</span><span class="s">" "</span><span class="o">,</span> <span class="s">""</span><span class="o">).</span><span class="na">toCharArray</span><span class="o">();</span><br data-jekyll-commonmark-ghpages="" />		<span class="kt">char</span><span class="o">[]</span> <span class="n">bChar</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">().</span><span class="na">replace</span><span class="o">(</span><span class="s">" "</span><span class="o">,</span> <span class="s">""</span><span class="o">).</span><span class="na">toCharArray</span><span class="o">();</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" />		<span class="k">if</span><span class="o">(</span><span class="n">aChar</span><span class="o">.</span><span class="na">length</span> <span class="o">!=</span> <span class="n">bChar</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" />		<span class="n">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">aChar</span><span class="o">);</span><br data-jekyll-commonmark-ghpages="" />		<span class="n">Arrays</span><span class="o">.</span><span class="na">sort</span><span class="o">(</span><span class="n">bChar</span><span class="o">);</span><br data-jekyll-commonmark-ghpages="" /><br data-jekyll-commonmark-ghpages="" />		<span class="k">return</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">aChar</span><span class="o">,</span> <span class="n">bChar</span><span class="o">);</span><br data-jekyll-commonmark-ghpages="" />	<span class="o">}</span><br data-jekyll-commonmark-ghpages="" /><span class="o">}</span></pre></td></tr></tbody></table></code></pre></figure>
 
   </div>
 </div>
@@ -185,13 +156,6 @@
     
     
     
-    
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
-      (window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-96359860-1', 'auto');
-      ga('send', 'pageview');
-    </script>
     
     <script src="/mnisdh/assets/js/main.js"></script>
   </body>
