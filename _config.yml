@@ -16,7 +16,7 @@
 title: mnisdh
 description: > # this means to ignore newlines until "baseurl:"
   Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
-baseurl: "/mnisdh"
+baseurl: ""
 url: "https://mnisdh.github.io"
 permalink: /:year/:month/:day/:title
 repository: mnisdh
