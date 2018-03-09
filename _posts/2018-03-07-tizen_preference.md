@@ -4,6 +4,7 @@ title:  "Tizen WebApp Preference"
 date:   2017-03-07 09:12:00 +0800
 categories: Tizen
 tags: Tizen WebApp Preference
+comments: 1
 ---
 **Tizen Web application 개발시 Preference 사용**
 

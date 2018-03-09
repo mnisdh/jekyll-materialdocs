@@ -4,6 +4,7 @@ title:  "Tizen WebApp Vibrate"
 date:   2017-03-06 17:30:13 +0800
 categories: Tizen
 tags: Tizen WebApp Vibrate Background
+comments: 1
 ---
 **Tizen Web application 개발시 진동기능 호출**
 

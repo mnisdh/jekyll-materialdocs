@@ -29,7 +29,7 @@ user_email: "mnisdh2@gmail.com"
 contact_url: "https://github.com/mnisdh"
 # google_tracking_id: "UA-96359860-1"
 google_site_verification: "UA-96359860-1"
-# disqus_shortname: "mnisdh"
+disqus_shortname: "mnisdh"
 
 # Build settings
 markdown: kramdown

@@ -4,6 +4,7 @@ title:  "Android Widget"
 date:   2017-03-01 09:00:00 +0800
 categories: Android
 tags: Android Widget Toggle Switch Checkbox Radiogroup Seekbar Spinner
+comments: 1
 ---
 **기본 Widget 설명**  
 

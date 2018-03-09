@@ -4,6 +4,7 @@ title:  "Java Code List Class"
 date:   2017-03-01 09:00:00 +0800
 categories: Java-Code
 tags: Java Code List Class Generic
+comments: 1
 ---
 **Generic을 사용하여 List 클래스 만들기**  
 

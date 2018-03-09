@@ -4,6 +4,7 @@ title:  "Java Generic"
 date:   2017-03-01 09:00:00 +0800
 categories: Java
 tags: Java Generic
+comments: 1
 ---
 **Generic**  
 - 클래스의 타입을 parameter로 만든 것이다

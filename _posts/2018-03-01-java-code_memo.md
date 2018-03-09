@@ -4,6 +4,7 @@ title:  "Java Code 메모장(MVC 패턴, mysql 사용)"
 date:   2017-03-01 09:00:00 +0800
 categories: Java-Code
 tags: Java Code 메모장 MVC mysql
+comments: 1
 ---
 **메모장**  
 

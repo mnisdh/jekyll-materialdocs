@@ -4,6 +4,7 @@ title:  "Android Property Animation"
 date:   2017-03-01 09:00:00 +0800
 categories: Android
 tags: Android Property Animation
+comments: 1
 ---
 **Property Animation**  
 - 코드로 애니메이션을 정의하여 사용  

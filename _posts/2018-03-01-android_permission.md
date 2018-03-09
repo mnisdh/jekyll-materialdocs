@@ -4,6 +4,7 @@ title:  "Android Permission"
 date:   2017-03-01 09:00:00 +0800
 categories: Android
 tags: Android Permission
+comments: 1
 ---
 **Permission**  
 - 안드로이드 기능을 사용시 권한을 획득하여야만 사용할 수 있다

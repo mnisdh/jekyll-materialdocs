@@ -4,6 +4,7 @@ title:  "Android Layout"
 date:   2017-03-01 09:00:00 +0800
 categories: Android
 tags: Android Layout
+comments: 1
 ---
 **Constraint Layout**  
 - 레이아웃이나 위젯에 연결하여 위치값을 설정하는 레이아웃

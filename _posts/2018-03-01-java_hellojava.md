@@ -4,6 +4,7 @@ title:  "Java Hello"
 date:   2017-03-01 09:00:00 +0800
 categories: Java
 tags: Java Hello
+comments: 1
 ---
 **변수 다루는 법**  
 

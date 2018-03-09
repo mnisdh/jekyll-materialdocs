@@ -4,6 +4,7 @@ title:  "Tizen WebApp WebSocket"
 date:   2017-03-06 17:35:13 +0800
 categories: Tizen
 tags: Tizen WebApp WebSocket Background
+comments: 1
 ---
 **Tizen Web application 개발시 WebSocket 사용**
 

@@ -4,6 +4,7 @@ title:  "Java File I/O"
 date:   2017-03-01 09:00:00 +0800
 categories: Java
 tags: Java File I/O
+comments: 1
 ---
 **File I/O**  
 

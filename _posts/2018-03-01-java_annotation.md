@@ -4,6 +4,7 @@ title:  "Java Annotation"
 date:   2017-03-01 09:00:00 +0800
 categories: Java
 tags: Java Annotation
+comments: 1
 ---
 **Annotation**(Metadata 라고도 불림)  
 - 클래스, 메소드, 변수등 모든요소에 선언 가능

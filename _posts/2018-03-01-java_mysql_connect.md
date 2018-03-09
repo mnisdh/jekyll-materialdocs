@@ -4,6 +4,7 @@ title:  "Java mySql"
 date:   2017-03-01 09:00:00 +0800
 categories: Java
 tags: Java mySql
+comments: 1
 ---
 **Connector 설치**  
 - osx의 경우 [Connector/j](https://dev.mysql.com/downloads/connector/j/5.1.html)를 다운로드한다

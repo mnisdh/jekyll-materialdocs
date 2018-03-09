@@ -4,6 +4,7 @@ title:  "Java OOP Solid"
 date:   2017-03-01 09:00:00 +0800
 categories: Java
 tags: Java OOP Solid
+comments: 1
 ---
 **OOP 설계**  
 - OOP란 Object Oriented Programming 의 약자로 객체지향 프로그래밍이라함

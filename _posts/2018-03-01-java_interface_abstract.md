@@ -4,6 +4,7 @@ title:  "Java Interface / Abstract"
 date:   2017-03-01 09:00:00 +0800
 categories: Java
 tags: Java Interface Abstract
+comments: 1
 ---
 **다형성의 성립조건**  
 - 클래스 계층구조(상속관계)

@@ -4,6 +4,7 @@ title:  "Java String"
 date:   2017-03-01 09:00:00 +0800
 categories: Java
 tags: Java String
+comments: 1
 ---
 **String 함수**  
 

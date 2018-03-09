@@ -4,6 +4,7 @@ title:  "Java Code 로또번호 생성기"
 date:   2017-03-01 09:00:00 +0800
 categories: Java-Code
 tags: Java Code 로또 번호 생성기
+comments: 1
 ---
 **로또번호 생성기**  
 랜덤값을 사용한 로또번호 생성기 연습

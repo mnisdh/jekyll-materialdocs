@@ -4,6 +4,7 @@ title:  "Java Math Random"
 date:   2017-03-01 09:00:00 +0800
 categories: Java
 tags: Java Math Random
+comments: 1
 ---
 **숫자계산**  
 
